@@ -1,20 +1,25 @@
-public class Projeto {
+package model;
 
-    private String nomeProjeto;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Equipe {
+
+    private String nomeEquipe;
     private String descricao;
-    private String dataInicio;
-    private String dataFim;
-    private String status;
+    private List<Usuario> membros;
 
-    public Projeto(String nomeProjeto, String descricao, String dataInicio, String dataFim, String status) {
-        this.nomeProjeto = nomeProjeto;
+    public Equipe(String nomeEquipe, String descricao) {
+        this.nomeEquipe = nomeEquipe;
         this.descricao = descricao;
-        this.dataInicio = dataInicio;
-        this.dataFim = dataFim;
-        this.status = status;
+        this.membros = new ArrayList<>();
     }
 
-    public String getNomeProjeto() {
-        return nomeProjeto;
+    public void adicionarMembro(Usuario usuario) {
+        membros.add(usuario);
+    }
+
+    public List<Usuario> getMembros() {
+        return membros;
     }
 }
