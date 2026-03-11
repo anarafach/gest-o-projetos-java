@@ -1,3 +1,5 @@
+package model;
+
 public class Usuario {
 
     private String nome;
@@ -20,7 +22,19 @@ public class Usuario {
         return nome;
     }
 
+    public String getCpf() {
+        return cpf;
+    }
+
     public String getEmail() {
         return email;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 }
